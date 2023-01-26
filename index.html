@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ef3021087b.js"
-      crossorigin="anonymous"></script>
-    <title>Dice Game</title>
+    <script src="https://kit.fontawesome.com/ef3021087b.js" crossorigin="anonymous"></script>    <title>Dice Game</title>
 </head>
 <body>
     <div id="container">
@@ -34,11 +32,19 @@
         </div>
         <div class="side right"></div>
         <div id="fun">
-            <div class="show">NEW GAME</div>
-            <img class="img one"></img>
-            <img class="img two"></img>
-            <div class="show">ROLL DICE</div>
-            <div class="show">HOLD</div>
+            <div class="show">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                NEW GAME</div>
+            <img class="img-one myImage" src="./assets/dice-1.png"></img>
+            <img class="img-two myImage-two" src="./assets/dice-1.png"></img>
+            <div class="show">
+                <i class="fa-solid fa-dice"></i>
+                <button id="myButton">ROLL DICE</button>
+            </div>
+            <div class="show">
+                <i class="fa-regular fa-hand"></i>
+                <button id="hold" >HOLD</button>
+            </div>
         </div>
     </div>
     <script src="game.js"></script>
