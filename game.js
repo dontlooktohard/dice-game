@@ -1,5 +1,5 @@
 let currentScore =0
-const holdBtn = document.querySelector('#hold')
+const holdBtn = document.querySelector('#hold');
 let isPlayerOne = false
 let totalScorePlayerOne = 0 ;
 let totalScorePlayerTwo = 0 ;
@@ -23,14 +23,25 @@ function generateNumber() {
     document.querySelectorAll('img')[1].setAttribute('src',firstDiceImage2);
 
     if (isPlayerOne) {
-    currentScore += randomNumber + randomNumber2;
-    let current = document.querySelectorAll('.score-box')[0];
-    current.textContent = currentScore;
-} else {
-    currentScore += randomNumber + randomNumber2;
-    let current = document.querySelectorAll('.score-box')[1];
-    current.textContent = currentScore;
-}
+      currentScore += randomNumber + randomNumber2;
+      let current = document.querySelectorAll('.score-box')[0];
+      current.textContent = currentScore;
+      if ((randomNumber + randomNumber2)===12) {
+        currentScore=0;
+        current.textContent = currentScore;
+        isPlayerOne = !isPlayerOne
+      }
+    } 
+    else {
+      currentScore += randomNumber + randomNumber2;
+      let current = document.querySelectorAll('.score-box')[1];
+      current.textContent = currentScore;
+      if ((randomNumber + randomNumber2)===12) {
+        currentScore=0;
+        current.textContent = currentScore;
+        isPlayerOne = !isPlayerOne
+      }
+    }
   });
 
   
