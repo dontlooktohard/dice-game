@@ -5,12 +5,13 @@ const startGame = document.querySelector('#startGame');
 let isPlayerOne = false
 let totalScorePlayerOne = 0 ;
 let totalScorePlayerTwo = 0 ;
-
+let targetScore = 0;
+console.log(startGame);
 
 startGame.addEventListener("click", function() {
   let target = document.querySelector('#textInput').value;
-  target = targetScore;
-  document.getElementById("gameMenu").display = "none";
+  targetScore = target ;
+  document.getElementById("gameMenu").style.display = "none";
   })
 
 
@@ -39,6 +40,13 @@ function generateNumber() {
       }
       if (totalScorePlayerOne > targetScore) {
         prompt('playerTwo wins the game 🤴')
+        current[0].textContent =0;
+        current[1].textContent =0;
+         currentScore = 0 ;
+         document.querySelectorAll('.score')[0].textContent =0;
+         document.querySelectorAll('.score')[1].textContent =0;
+         isPlayerOne = !isPlayerOne
+         document.getElementById("gameMenu").style.display = "show";
       }
     } 
     else {
@@ -52,6 +60,13 @@ function generateNumber() {
       }
       if (totalScorePlayerTwo > targetScore) {
         prompt('playerOne wins the game 🤴')
+        current[0].textContent =0;
+        current[1].textContent =0;
+         currentScore = 0 ;
+         document.querySelectorAll('.score')[0].textContent =0;
+         document.querySelectorAll('.score')[1].textContent =0;
+         isPlayerOne = !isPlayerOne
+         document.getElementById("gameMenu").style.display = "show";
       }
     }
   });
