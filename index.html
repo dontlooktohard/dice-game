@@ -34,7 +34,8 @@
         <div id="fun">
             <div class="show">
                 <i class="fa-solid fa-arrows-rotate"></i>
-                NEW GAME</div>
+                <button id="newGame">NEW GAME</button>
+            </div>
             <img class="img-one myImage" src="./assets/dice-1.png"></img>
             <img class="img-two myImage-two" src="./assets/dice-1.png"></img>
             <div class="show">
@@ -45,6 +46,22 @@
                 <i class="fa-regular fa-hand"></i>
                 <button id="hold" >HOLD</button>
             </div>
+        </div>
+    </div>
+    <div id="gameMenu">
+        <div class="rules">
+            <h3>Game Instructions</h3>
+            <ul>
+                <li>in your turn roll dice (at lest once) and accumulate points in current. </li>
+                <li>you can roll again or press hold to save the points from current and end the turn </li>
+                <li>NOTICE IF YOU GET 6 6- YOU WILL LOSE ALL THE CURRENT POINTS AND END YOUR TURN </li>
+                <li>if you managed to reach the target score you win!, if you pass it you lose </li>
+            </ul>
+        </div>
+        <div class="target">
+            <h3>Please select a target score:</h3>
+            <input type="number"  min="50" max="100" id="textInput">
+            <button type="submit" value="show layer" id="startGame">Start Game</button>
         </div>
     </div>
     <script src="game.js"></script>
